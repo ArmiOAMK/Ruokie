@@ -16,31 +16,120 @@
 .container { width: 100%;}
 .input-group { width: 100%; height: 40px;}
 .login-button-group { width: 100%; height: 50px;}
-#sign-in {margin-top: 20px; margin-bottom: 20px;}
+#sign-in { margin-top: 20px; margin-bottom: 20px;}
 
 .foodImage {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
 }
+
+.foodImageSlider {
+    height: 300px;
+    width: auto;
+}
+
 #foodImage {
-    height: 100%;
+    height-max: 300px;
     width: 100%;
-    overflow: hidden;
 }
 
-.swipe-left {
-    transform: translateX(400px) scale(1);
-    transition: 1s;
-    margin-left: 400px;
-    cursor: e-resize;
-}
-.swipe-right {
-    transform: translateX(-400px) scale(1);
-    transition: 1s;
-    margin-left: -400px;
-    cursor: w-resize;
+.slider{
+    background-color: #172f44;
+    border-bottom: solid #172f44 4px;
+    height: 304px;
 }
 
+.help{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.helptext {
+    text-align: center;
+    font-size: 20px;
+    color: #172f44;
+}
+
+#ingredient-add-input{
+    margin-top: 60px;
+    font-size: 20px;
+
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+}
+
+#ingredient-add-button {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #5cb85c;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #5cb85c 4px;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #ffffff;
+
+}
+
+#ingredient-exclude-button {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #d9534f;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    border: solid #d9534f 4px;
+    text-decoration: none;
+    width: 100%;
+    background: #ffffff;
+
+}
+
+.button-group {
+    margin-top: 30px;
+}
+
+#search-button {
+    margin-top: 40px;
+    width: 80px;
+    background: url(img/button-tomaatti.png) no-repeat;
+
+}
+
+#tomaatti {
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label{
+    font-size: 20px;
+}
+
+#ingredientsAdded {
+    margin-top: 80px;
+    height: 50px;
+}
+
+#ingredientsExcluded{
+    margin-top: 10px;
+    height: 50px;
+}
+
+#logo {
+    height: 50px;
+}
+
+.content-potato {
+    margin-top: 80px;
+    margin-bottom: 84px;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -55,14 +144,14 @@ body {
     position: absolute;
     bottom: 0;
     padding: 0;
-    height: 60px;
-    background-color: #f5f5f5;
+    height: 80px;
+    background-color: #F2F5EB;
     width: 100%;
 }
 
 .content {
     width: auto;
-    margin: 0;
+    margin-top: 80px;
 }
 
 .row {
@@ -70,7 +159,7 @@ body {
 }
 
 .inner-content {
-    width: 95%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -101,8 +190,8 @@ body {
     padding: -15px;
 }
 
-.content {
-    margin-top: 60px;
+.content_recipe{
+    margin-top: 80px;
 }
 
 .col-xs-6 {
@@ -111,22 +200,32 @@ body {
 
 /* Hanna */
 
+.reuna{
+		border-bottom: solid 1px #172f44;
+}
+
 body {
     background-color: #F2F5EB;
 }
 .header {
     top: 0;
     padding: 0;
-    height: 60px;
-    background-color: #7C9E1F;
+    height: 80px;
+    /*background-color: #7C9E1F;*/
+    background-color: #F2F5EB;
     width: 100%;
     position:fixed;
+    border-bottom: solid #172f44 4px;
+
 }
 .footer {
-    background-color: #7C9E1F;
+    /*background-color: #7C9E1F;*/
     position: fixed ;
 }
 
+a:link {
+	text-decoration:none;
+}
 
 .list {
     width:60px;
@@ -141,36 +240,44 @@ body {
     margin-left:auto;
     margin-right: auto;
     padding:2px;
+	transition: all .6s ease-in-out;
+    
+	
 }
 
 .tomato:hover {
     cursor:pointer;
+	transform: scale(1.4);
+	
+	
 }
 
 .nappi {
+    /*
     background: #eef2e4;
     background-image: -webkit-linear-gradient(top, #eef2e4, #d6d6d6);
     background-image: -moz-linear-gradient(top, #eef2e4, #d6d6d6);
     background-image: -ms-linear-gradient(top, #eef2e4, #d6d6d6);
     background-image: -o-linear-gradient(top, #eef2e4, #d6d6d6);
-    background-image: linear-gradient(to bottom, #eef2e4, #d6d6d6);
-    -webkit-border-radius: 60;
-    -moz-border-radius: 60;
-    border-radius: 60px;
+    background-image: linear-gradient(to bottom, #eef2e4, #d6d6d6);*/
+    background: #ffffff;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
     font-family: Arial;
-    color: #4c6414;
+    color: #172f44;
     font-size: 21px;
     padding: 10px 20px 10px 20px;
-    border: solid #4c6414 4px;
+    border: solid #172f44 4px;
     text-decoration: none;
-
 }
 
+
 .down{
-    width:10%;
+    width:148px;
     margin-left:auto;
     margin-right: auto;
-    padding:2px;
+    padding-top: 20px;
 }
 
 .back{
@@ -178,8 +285,27 @@ body {
     margin-left:auto;
     margin-right: auto;
     padding:2px;
+    transition: width 2s, height 2s, ease-in-out;
 }
 
 .back:hover {
     cursor:pointer;
+	width:100%;
+}
+
+@font-face {
+	font-family: "Intro Head" ;
+	src: url("fonts\introheadr-base.otf") format('otf') ;
+}
+
+.foodName {
+	font-family: "Intro Head" ;
+	color: #162f45;
+	font-weight:bold;
+	text-transform:uppercase;
+	padding: 10%;
+}
+
+.rating {
+	padding: 10px;
 }

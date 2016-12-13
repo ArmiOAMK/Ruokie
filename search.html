@@ -12,6 +12,7 @@
     <script src="js/angular.min.js"></script>
     <script src="js/ngStorage.js"></script>
     <script src="js/ruokie-angular.js"></script>
+    <script src="js/jquery.pulse.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script>
@@ -23,69 +24,77 @@
 
             document.getElementById("ingredientsAdded").innerHTML = text;
             document.getElementById("ingredient-add-input").value = '';
+            var properties = {
+                paddingTop:    '4px',
+                paddingBottom: '4px'
+            };
+            var el = $('.label-success');
+
+            el.pulse(properties, {duration : 500, pulses : 1});
         }
         function excludeIngredient(ingredient){
-            excText += "<span class='label label-warning pulse'>" + ingredient + "</span>";
+            excText += "<span class='label label-danger pulse'>" + ingredient + "</span>";
 
             document.getElementById("ingredientsExcluded").innerHTML = excText;
             document.getElementById("ingredient-add-input").value = '';
+
+            var properties = {
+                paddingTop:    '4px',
+                paddingBottom: '4px'
+            };
+            var el = $('.label-danger');
+
+            el.pulse(properties, {duration : 500, pulses : 1});
         }
     </script>
 
 </head>
 <body ng-app="ruokieApp" ng-controller="ruokieCtrl">
 <div class="container">
-    <div id="logo">Ruokie</div>
+<div id="logo"><img class="logo" src="img/logo-tomaatti.png" /></div>
 
     <div id="search">
         <div class="form-group row">
             <div class="col-xs-12">
-                Search by ingredients:
-
                 <div id="ingredientsAdded"></div>
-
             </div>
         </div>
         <div class="form-group row">
             <div class="col-xs-12">
-                Excluded:
                 <div id="ingredientsExcluded"></div>
+            </div>
+        </div>
 
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-xs-12">
-                Add ingredients to your search.
-            </div>
-        </div>
         <div class="form-group row">
             <div class="col-xs-12">
                 <input class="form-control input-group" id="ingredient-add-input" type="text" placeholder="Type the ingredient here..."  />
             </div>
         </div>
+        <div class="button-group">
         <div class="form-group row">
             <div class="col-xs-12">
-                <button class="btn btn-primary login-button-group" id="ingredient-add-button" onclick="addIngredient(document.getElementById('ingredient-add-input').value)">Add ingredient</button>
+                <button id="ingredient-add-button" onclick="addIngredient(document.getElementById('ingredient-add-input').value)">Add ingredient</button>
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-xs-12">
-                <button class="btn btn-primary login-button-group" id="ingredient-exclude-button" onclick="excludeIngredient(document.getElementById('ingredient-add-input').value)">Exclude ingredient</button>
+                <button id="ingredient-exclude-button" onclick="excludeIngredient(document.getElementById('ingredient-add-input').value)">Exclude ingredient</button>
             </div>
         </div>
-        <div class="form-group row">
-            <div class="col-xs-12">
-                Excluding ingredients from a search is for <a href="register.html">registered</a> users.
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-xs-12">
-                <button class="btn btn-success login-button-group" id="search-button" onclick="window.location.href='swipe.html'">Search recipes</button>
-            </div>
+
         </div>
     </div>
 
+</div>
+<div class="footer">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="list">
+                <button class="nappi" onclick="window.location.href='swipe.html'">0</button>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
