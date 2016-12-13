@@ -1,0 +1,61 @@
+{
+	"type": "Collection",
+	"properties": {
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "name",
+			"order": 0
+		},
+		"prepTime": {
+			"name": "prepTime",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "prepTime",
+			"order": 1
+		},
+		"difficulty": {
+			"name": "difficulty",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "difficulty",
+			"order": 2
+		},
+		"cooktime": {
+			"name": "cooktime",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "cooktime",
+			"order": 3
+		},
+		"servings": {
+			"name": "servings",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "servings",
+			"order": 4
+		},
+		"ingredients": {
+			"name": "ingredients",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "ingredients",
+			"order": 5
+		},
+		"preparations": {
+			"name": "preparations",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "preparations",
+			"order": 6
+		}
+	}
+}

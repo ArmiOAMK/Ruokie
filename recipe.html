@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/ruokie_stylesheet.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ngStorage.js"></script>
+    <script src="js/ruokie-angular.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body ng-controller="ruokieCtrl" ng-init="recipe=getRecipe('292ce4aeb4453b58')">
+<div class="content" ng-model="recipe">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="foodImage"><img id="foodImage" class="crop-height" src="img/burger_1.jpeg"/></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="foodName">{{recipe.name}}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="rating">***</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div>Prep time:<br>12</div>
+        </div>
+        <div class="col-xs-6">
+            <div>Difficulty:<br>easy</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div>Cook time:</div>
+        </div>
+        <div class="col-xs-6">
+            <div>Servings:</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div>Ingredients:</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div>Instructions:</div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div id="counter">1</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+@media all and (max-width: 1200px) { /* screen size until 1200px */
+    body {
+        font-size: 1.5em; /* 1.5x default size */
+    }
+}
+@media all and (max-width: 1000px) { /* screen size until 1000px */
+    body {
+        font-size: 1.5em; /* 1.2x default size */
+    }
+}
+@media all and (max-width: 500px) { /* screen size until 500px */
+    body {
+        font-size: 1.5em; /* 0.8x default size */
+    }
+}
+.container { width: 100%;}
+.input-group { width: 100%; height: 40px;}
+.login-button-group { width: 100%; height: 50px;}
+#sign-in {margin-top: 20px; margin-bottom: 20px;}
+
+.foodImage {
+    height: 100%;
+    width: 100%;
+}
+#foodImage {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    height: 60px;
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+.content {
+    width: auto;
+    margin: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.inner-content {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle-info {
+
+}
+
+.instruction-image {
+    width: 100%;
+}
+
+.logo {
+    width: 100%;
+}
+
+/*Armi*/
+
+.foodImg {
+    width: 100%;
+    height-max: 300px;
+    padding: -15px;
+}
+
+.content {
+    margin-top: 60px;
+}
+
+.col-xs-6 {
+    padding: 0;
+}
+
+/* Hanna */
+
+body {
+    background-color: #F2F5EB;
+}
+.header {
+    top: 0;
+    padding: 0;
+    height: 60px;
+    background-color: #7C9E1F;
+    width: 100%;
+    position:fixed;
+}
+.footer {
+    background-color: #7C9E1F;
+    position: fixed ;
+}
+
+
+.list {
+    width:60px;
+    margin-left:auto;
+    margin-right: auto;
+    padding:2px;
+}
+
+
+.tomato {
+    width:50%;
+    margin-left:auto;
+    margin-right: auto;
+    padding:2px;
+}
+
+.tomato:hover {
+    cursor:pointer;
+}
+
+.nappi {
+    background: #eef2e4;
+    background-image: -webkit-linear-gradient(top, #eef2e4, #d6d6d6);
+    background-image: -moz-linear-gradient(top, #eef2e4, #d6d6d6);
+    background-image: -ms-linear-gradient(top, #eef2e4, #d6d6d6);
+    background-image: -o-linear-gradient(top, #eef2e4, #d6d6d6);
+    background-image: linear-gradient(to bottom, #eef2e4, #d6d6d6);
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Arial;
+    color: #4c6414;
+    font-size: 21px;
+    padding: 10px 20px 10px 20px;
+    border: solid #4c6414 4px;
+    text-decoration: none;
+
+}
+
+.down{
+    width:10%;
+    margin-left:auto;
+    margin-right: auto;
+    padding:2px;
+}
+
+.back{
+    width:50%;
+    margin-left:auto;
+    margin-right: auto;
+    padding:2px;
+}
+
+.back:hover {
+    cursor:pointer;
+}

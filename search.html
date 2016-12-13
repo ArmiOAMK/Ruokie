@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search recipes</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/ruokie_stylesheet.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/ngStorage.js"></script>
+    <script src="js/ruokie-angular.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body ng-app="ruokieApp" ng-controller="ruokieCtrl">
+<div class="container">
+    <div id="logo">Ruokie</div>
+
+    <div id="search">
+        <div class="form-group row">
+            <div class="col-xs-12">
+                Search by ingredients:
+
+
+                <div ng-repeat="(key,value) in ingredientsAdd">
+                    <span class="label label-success">{{value}}</span>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-12">
+                Excluded:
+                <span class="label label-danger pulse">Potato</span>
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-12">
+                Add ingredients to your search.
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-12">
+                <input class="form-control input-group" id="ingredient-add-input" type="text" placeholder="Type the ingredient here..."  />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary login-button-group" id="ingredient-button">Add ingredient</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-12">
+                <button class="btn btn-primary login-button-group" id="ingredient-button">Exclude ingredient</button>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-12">
+                Excluding ingredients from a search is for <a href="register.html">registered</a> users.
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xs-12">
+                <button class="btn btn-success login-button-group" id="search-button" onclick="window.location.href='BestBreakfastPotatoesEver.html'">Search recipes</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
