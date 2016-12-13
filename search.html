@@ -14,20 +14,23 @@
     <script src="js/ruokie-angular.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script>
+        var text = "";
+        var excText = "";
 
+        function addIngredient(ingredient){
+            text += "<span class='label label-success pulse'>" + ingredient + "</span>";
 
+            document.getElementById("ingredientsAdded").innerHTML = text;
+            document.getElementById("ingredient-add-input").value = '';
+        }
+        function excludeIngredient(ingredient){
+            excText += "<span class='label label-warning pulse'>" + ingredient + "</span>";
 
-
-
-
-
-
-
-
-
-
-
-
+            document.getElementById("ingredientsExcluded").innerHTML = excText;
+            document.getElementById("ingredient-add-input").value = '';
+        }
+    </script>
 
 </head>
 <body ng-app="ruokieApp" ng-controller="ruokieCtrl">
@@ -39,18 +42,14 @@
             <div class="col-xs-12">
                 Search by ingredients:
 
-
-                <div ng-repeat="(key,value) in ingredientsAdd">
-                    <span class="label label-success">{{value}}</span>
-                </div>
-
+                <div id="ingredientsAdded"></div>
 
             </div>
         </div>
         <div class="form-group row">
             <div class="col-xs-12">
                 Excluded:
-                <span class="label label-danger pulse">Potato</span>
+                <div id="ingredientsExcluded"></div>
 
             </div>
         </div>
@@ -66,13 +65,13 @@
         </div>
         <div class="form-group row">
             <div class="col-xs-12">
-                <button class="btn btn-primary login-button-group" id="ingredient-button">Add ingredient</button>
+                <button class="btn btn-primary login-button-group" id="ingredient-add-button" onclick="addIngredient(document.getElementById('ingredient-add-input').value)">Add ingredient</button>
             </div>
         </div>
 
         <div class="form-group row">
             <div class="col-xs-12">
-                <button class="btn btn-primary login-button-group" id="ingredient-button">Exclude ingredient</button>
+                <button class="btn btn-primary login-button-group" id="ingredient-exclude-button" onclick="excludeIngredient(document.getElementById('ingredient-add-input').value)">Exclude ingredient</button>
             </div>
         </div>
         <div class="form-group row">
