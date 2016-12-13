@@ -28,6 +28,20 @@
     overflow: hidden;
 }
 
+.swipe-left {
+    transform: translateX(400px) scale(1);
+    transition: 1s;
+    margin-left: 400px;
+    cursor: e-resize;
+}
+.swipe-right {
+    transform: translateX(-400px) scale(1);
+    transition: 1s;
+    margin-left: -400px;
+    cursor: w-resize;
+}
+
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -36,7 +50,6 @@ html {
 }
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
 }
 .footer {
     position: absolute;
