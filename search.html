@@ -21,31 +21,19 @@
         var excText = "";
 
         function addIngredient(ingredient){
-            text += "<span class='label label-success pulse'>" + ingredient + "</span>";
+            text += "<span class='label label-success'>" + ingredient + "</span>";
 
             document.getElementById("ingredientsAdded").innerHTML = text;
             document.getElementById("ingredient-add-input").value = '';
-            var properties = {
-                paddingTop:    '4px',
-                paddingBottom: '4px'
-            };
-            var el = $('.label-success');
 
-            el.pulse(properties, {duration : 500, pulses : 1});
+
         }
         function excludeIngredient(ingredient){
-            excText += "<span class='label label-danger pulse'>" + ingredient + "</span>";
+            excText += "<span class='label label-danger'>" + ingredient + "</span>";
 
             document.getElementById("ingredientsExcluded").innerHTML = excText;
             document.getElementById("ingredient-add-input").value = '';
 
-            var properties = {
-                paddingTop:    '4px',
-                paddingBottom: '4px'
-            };
-            var el = $('.label-danger');
-
-            el.pulse(properties, {duration : 500, pulses : 1});
         }
     </script>
 

@@ -23,8 +23,9 @@
     <div class="slider">
         <div class="slide"><img class="foodImageSlider" src="img/potato1.png"/></div>
         <div class="slide"><img class="foodImageSlider" src="img/potato2.png"/></div>
+        <div class="slide"><img class="foodImageSlider" src="img/potato3.jpeg"/></div>
+        <div class="slide"><img class="foodImageSlider" src="img/kmarket.png"/></div>
         <div class="slide"><img class="foodImageSlider" src="img/potato4.png"/></div>
-        <div class="slide"></div>
     </div>
     <div class="help">
     <div class="helptext">Swipe left to dismiss.</div>
@@ -56,16 +57,23 @@
         var counter = 0;
         document.getElementById("number").innerHTML = '' + counter;
         $('.slider').slick({
+            speed: 10
         });
         $('.slider').on('swipe', function(event, slick, direction){
             if (direction == 'right') {
                 counter += 1;
                 document.getElementById("number").innerHTML = '' + counter;
-                $('.nappi').addClass('animate');
+                $('.nappi').addClass('scaleAnim');
+                setTimeout(doSomething, 1000);
+
+                function doSomething() {
+                    $('.nappi').removeClass('scaleAnim');
+                }
             }
         });
-        $('.slider').on('beforeChange', function(event,slick,currentSlide){
-            $('.slider').slick('slickRemove', currentSlide);
+
+        $('.slider').on('afterChange', function(event,slick,currentSlide){
+            $('.slider').slick('slickRemove', currentSlide - 1);
         });
     });
 

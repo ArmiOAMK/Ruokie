@@ -110,6 +110,38 @@
 
 .label{
     font-size: 20px;
+    margin-right: 10px;
+}
+
+.scaleAnim{
+-webkit-animation-name: scaleAnim; /* Safari 4.0 - 8.0 */
+-webkit-animation-duration: 0.6s; /* Safari 4.0 - 8.0 */
+animation-name: scaleAnim;
+animation-duration: 0.6s;
+}
+
+@keyframes scaleAnim {
+    0%   {transform: scale(1.0);}
+    50%  {transform: scale(1.1);}
+    100% {transform: scale(1.0);}
+}
+
+
+#tom {position: absolute; top: 200px; left: 130px; width: 80px;}
+#tomtext {position: absolute; top: 220px; left: 30px; width: 300px;}
+
+#tom{
+    -webkit-animation-name: tomatoSpin; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation: tomatoSpin 2s infinite;
+    transform-origin: 50% 54%;
+}
+
+@keyframes tomatoSpin{
+    0% {transform: rotate(0deg);}
+    10% {transform: rotate(0deg);}
+    90% {transform: rotate(360deg);}
+    100% {transform: rotate(360deg);}
 }
 
 #ingredientsAdded {
